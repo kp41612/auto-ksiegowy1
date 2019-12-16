@@ -1,4 +1,4 @@
-<input class="form-control" name="kwota" type="number" required min="0" [(ngModel)]="nowyWydatek.kwota">
+
 <h2>Dodaj wydatek</h2>
 
 <form (ngSubmit)="onSubmit()">
@@ -7,11 +7,11 @@
       <label>Kategoria:</label>
       <select class="form-control" name="kategoria" [(ngModel)]="nowyWydatek.kategoria">       
         <option *ngFor="let k of kategorie">{{k}}</option>
-</select>
+      </select>
     </div>
     <div class="col">
       <label>Kwota:</label>
-      <input class="form-control" name="kwota" type="number" required min="0">
+      <input class="form-control" name="kwota" type="number" required min="0" [(ngModel)]="nowyWydatek.kwota">
     </div>
     <div class="col">
       <label>Data:</label>
