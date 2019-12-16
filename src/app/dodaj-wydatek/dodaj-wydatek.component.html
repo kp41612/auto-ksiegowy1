@@ -34,3 +34,7 @@
   </div>
   <button class="btn btn-primary">Zapisz</button>
 </form>
+
+<select class="form-control" name="kategoria" [(ngModel)]="nowyWydatek.kategoria">
+  <option *ngFor="let k of kategorie">{{k}}</option>
+</select>
