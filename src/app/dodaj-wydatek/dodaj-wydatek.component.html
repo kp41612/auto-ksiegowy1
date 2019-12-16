@@ -1,7 +1,7 @@
 <input class="form-control" name="kwota" type="number" required min="0" [(ngModel)]="nowyWydatek.kwota">
 <h2>Dodaj wydatek</h2>
 
-<form>
+<form (ngSubmit)="onSubmit()">
   <div class="row">
     <div class="col">
       <label>Kategoria:</label>
@@ -36,6 +36,3 @@
   <button class="btn btn-primary">Zapisz</button>
   
 </form>
-
-
-<form (ngSubmit)="onSubmit()">
