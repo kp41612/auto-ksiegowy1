@@ -19,4 +19,7 @@ export class WydatkiService {
     getWydatki() {
     return this.wydatki;
   }
+   getKategorie(): string[] {
+    return KATEGORIE;
+  }
 }
