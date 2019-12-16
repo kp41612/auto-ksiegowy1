@@ -22,4 +22,8 @@ export class WydatkiService {
    getKategorie(): string[] {
     return KATEGORIE;
   }
+  dodajWydatek(nowyWydatek: Wydatek): void {
+    this.wydatki.push(nowyWydatek);
+    
+  }
 }
