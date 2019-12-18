@@ -11,7 +11,7 @@
         <th>Kwota</th>
         <th>Opis</th>
         <th>Litrów/km</th>
-        <th></th>
+        <th>Usuń Wydatek</th>
     </tr>
     <tr *ngFor="let wydatek of wydatki">
       
@@ -33,7 +33,7 @@
         </span>
         </span>
       <td>
-        <button class="btn btn-danger" (click)="usunWydatek(wydatek.id)">Usuń</button>
+        <button class="btn btn-danger" (click)="usunWydatek(wydatek.id)" >Usuń</button>
       </td>
         
         
