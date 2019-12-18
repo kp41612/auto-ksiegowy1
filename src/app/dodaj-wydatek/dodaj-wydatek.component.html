@@ -1,7 +1,7 @@
 
 <h2>Dodaj wydatek</h2>
 
-<form (ngSubmit)="onSubmit()">
+<form (ngSubmit)="onSubmit()" #wydatekForm="ngForm">
   <div class="row">
     <div class="col">
       <label>Kategoria:</label>
@@ -33,6 +33,6 @@
     <label>Opis:</label>
     <input class="form-control" name="opis" type="text" [(ngModel)]="nowyWydatek.opis">
   </div>
-  <button class="btn btn-primary">Zapisz</button>
+  <button class="btn btn-primary" [disabled]="wydatekForm.invalid" >Zapisz</button>
   
 </form>
