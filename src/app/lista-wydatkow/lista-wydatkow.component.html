@@ -11,8 +11,10 @@
         <th>Kwota</th>
         <th>Opis</th>
         <th>Litrów/km</th>
+        <th></th>
     </tr>
     <tr *ngFor="let wydatek of wydatki">
+      
         <td>{{wydatek.kategoria}}</td>
         <td>{{wydatek.data | date:'dd.MM.yyyy'}}</td>
         <td class="text-sm-right">{{wydatek.kwota | number:'1.2-2'}} zł</td>
@@ -30,7 +32,12 @@
         </span>
         </span>
         </span>
+      <td>
+        <button class="btn btn-danger" (click)="usunWydatek(wydatek.id)">Usuń</button>
+      </td>
+        
         
         
     </tr>
+    
 </table>
