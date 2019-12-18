@@ -18,7 +18,7 @@
       <input class="form-control" name="data" type="date" required [(ngModel)]="nowyWydatek.data">
     </div>
   </div>
-  <div class="row">
+  <div class="row" *ngIf="nowyWydatek.kategoria=='Tankowanie'">
     <div class="col">
       <label>Przebieg:</label>
       <input class="form-control" name="ileKm" type="number" [(ngModel)]="nowyWydatek.ileKm">
