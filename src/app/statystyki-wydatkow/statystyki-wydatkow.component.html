@@ -1,0 +1,15 @@
+
+<h1>Statystyki wydatków</h1> <br>
+    <div style="width:25%;">
+      <label>Kategoria:</label>
+      <select class="form-control" name="kategoria" [(ngModel)]="nowyWydatek.kategoria">       
+        <option *ngFor="let k of kategorie">{{k}}</option>
+      </select>
+    </div> <br>
+    <div style="display:block;">
+      <label>Kwota:</label>
+      <span *ngIf='wydatek.kategoria == "Tankowanie"'>
+      {{wydatek.kwota}}
+    </span>
+    </div>
+    

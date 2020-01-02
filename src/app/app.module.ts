@@ -6,11 +6,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ListaWydatkowComponent } from './lista-wydatkow/lista-wydatkow.component';
 import { DodajWydatekComponent } from './dodaj-wydatek/dodaj-wydatek.component';
-import {WydatkiService} from './lista-wydatkow.service'
+import {WydatkiService} from './lista-wydatkow.service';
+import { StatystykiWydatkowComponent } from './statystyki-wydatkow/statystyki-wydatkow.component'
 
 const appRoutes: Routes = [
   { path: 'wydatki', component: ListaWydatkowComponent },
   { path: 'dodaj', component: DodajWydatekComponent },
+  { path: 'statystyki', component: StatystykiWydatkowComponent },
   { path: '',
     redirectTo: '/wydatki',
     pathMatch: 'full'
@@ -19,7 +21,7 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, RouterModule.forRoot(appRoutes) ],
-  declarations: [ AppComponent, ListaWydatkowComponent, DodajWydatekComponent ],
+  declarations: [ AppComponent, ListaWydatkowComponent, DodajWydatekComponent, StatystykiWydatkowComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ WydatkiService ]
 })
