@@ -1,8 +1,8 @@
-<div class="container">
-  <h1>
+<div>
+  <h1 style="margin-left: 1%;">
     AutoKsiegowy
   </h1>
-  <h2>Lista wydatków</h2>
+  <h2 style="margin-left: 1%;">Lista wydatków</h2>
 </div>
 <table class="table">
     <tr>
@@ -19,6 +19,7 @@
         <td>{{wydatek.data | date:'dd.MM.yyyy'}}</td>
         <td class="text-sm-right">{{wydatek.kwota | number:'1.2-2'}} zł</td>
         <td>{{wydatek.opis}}</td>
+
         <span *ngIf='wydatek.kategoria == "Tankowanie"'>
         <span *ngIf = 'wydatek.ileKm && wydatek.ileLitrow'>
           <td>{{wydatek.ileLitrow | number:'1.1'}} L / {{wydatek.ileKm}} km </td>
@@ -31,6 +32,9 @@
           <td>{{wydatek.ileLitrow | number:'1.1'}} L </td>
         </span>
         </span>
+        </span>
+        <span *ngIf='wydatek.kategoria !== "Tankowanie"'>
+          <td></td>
         </span>
       <td>
         <button class="btn btn-danger" (click)="usunWydatek(wydatek.id)" >Usuń</button>
