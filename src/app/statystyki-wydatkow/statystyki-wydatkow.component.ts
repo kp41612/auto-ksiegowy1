@@ -9,16 +9,21 @@ import { Router } from '@angular/router';
   styleUrls: ['./statystyki-wydatkow.component.css']
 })
 export class StatystykiWydatkowComponent implements OnInit {
-
-kategorie:string [];
+kwota: number;
+kategorie: string[];
 nowyWydatek: Wydatek;
-
+wydatki: any;
  constructor(private wydatkiService: WydatkiService, private router: Router) { }
 
   ngOnInit() {
     
   this.nowyWydatek = new Wydatek ('Tankowanie',null,null,null);
   this.kategorie = this.wydatkiService.getKategorie();
+  this.wydatki = this.wydatkiService.getWydatki();
   }
+ 
+ getTotal(){
+this.kwota=this.wydatkiService.getWydatki();
+ }
 
 }

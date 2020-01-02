@@ -8,7 +8,7 @@ export class WydatkiService {
   private nextId: number;
 
   constructor() {
-       this.wydatki = [
+      this.wydatki = [
       new Wydatek(1, 'Tankowanie', 252.43, '', new Date(2018, 4, 30), 527.5, 48),
       new Wydatek(2, 'Myjnia', 75, '', new Date(2018, 4, 2)),
       new Wydatek(3, 'Serwis', 1250, 'Klocki, rozrząd i parę drobiazgów', new Date(2018, 3, 16)),
@@ -21,6 +21,7 @@ export class WydatkiService {
     getWydatki() {
     return this.wydatki;
   }
+  
    getKategorie(): string[] {
     return KATEGORIE;
   }

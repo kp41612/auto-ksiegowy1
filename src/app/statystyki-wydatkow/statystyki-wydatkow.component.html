@@ -1,15 +1,26 @@
 
 <h1>Statystyki wydatków</h1> <br>
-    <div style="width:25%;">
+
+<div>    
+<table class="table" style="width:20%;">
+  <th>Wydatki:</th>
+    <tr *ngFor="let wydatek of wydatki">
+        <td class="text-sm-left">{{wydatek.kwota | number:'1.2-2'}} zł</td>
+    </tr>
+   
+
+</table>
+</div>
+
+ <div style="width:25%;">
       <label>Kategoria:</label>
       <select class="form-control" name="kategoria" [(ngModel)]="nowyWydatek.kategoria">       
         <option *ngFor="let k of kategorie">{{k}}</option>
       </select>
     </div> <br>
-    <div style="display:block;">
+    <!-- <div style="width:25%;">
       <label>Kwota:</label>
-      <span *ngIf='wydatek.kategoria == "Tankowanie"'>
-      {{wydatek.kwota}}
-    </span>
-    </div>
+    </div> <br> -->
+
+
     
