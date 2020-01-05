@@ -1,7 +1,5 @@
 
 <h1>Statystyki wydatków</h1> <br>
-
-<div>    
 <table class="table" style="width:20%;">
   <th>Wydatki:</th>
     <tr *ngFor="let wydatek of wydatki">
@@ -10,17 +8,27 @@
    
 
 </table>
-</div>
+<h6>Wydatki Łącznie: <span style="font-weight:normal;">{{suma | number:'1.2-2'}} zł</span></h6>
 
- <div style="width:25%;">
-      <label>Kategoria:</label>
+ <div style="width:25%;"><br>
+      <label style="font-weight:bold;">Kategoria:</label><br>
       <select class="form-control" name="kategoria" [(ngModel)]="nowyWydatek.kategoria">       
-        <option *ngFor="let k of kategorie">{{k}}</option>
-      </select>
-    </div> <br>
-    <!-- <div style="width:25%;">
-      <label>Kwota:</label>
-    </div> <br> -->
+        <option *ngFor="let k of kategorie" >{{k}}</option>
+         <!-- <span *ngIf='ngModel == "Tankowanie"'>
+           <p>adasdas</p>
+         </span> -->
+      </select>   
+</div> <br>
+
+<tr *ngFor="let wydatek of wydatki">
+   <span *ngIf='wydatek.kategoria == "Tankowanie"'>{{suma}}</span>
+</tr>
+
+  <h6>Wydatki Tankowanie: <span style="font-weight:normal;">{{suma | number:'1.2-2'}} zł</span></h6>
+  <h6>Wydatki Myjnia: <span style="font-weight:normal;">{{suma | number:'1.2-2'}} zł</span></h6>
+  <h6>Wydatki Serwis: <span style="font-weight:normal;">{{suma | number:'1.2-2'}} zł</span></h6>
+  <h6>Wydatki Inne: <span style="font-weight:normal;">{{suma | number:'1.2-2'}} zł</span></h6>
 
 
-    
+
+

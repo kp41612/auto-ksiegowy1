@@ -13,17 +13,17 @@ kwota: number;
 kategorie: string[];
 nowyWydatek: Wydatek;
 wydatki: any;
+suma: number;
  constructor(private wydatkiService: WydatkiService, private router: Router) { }
 
   ngOnInit() {
     
-  this.nowyWydatek = new Wydatek ('Tankowanie',null,null,null);
+  this.nowyWydatek = new Wydatek;
   this.kategorie = this.wydatkiService.getKategorie();
   this.wydatki = this.wydatkiService.getWydatki();
+  this.suma = this.wydatkiService.getSuma();
   }
  
- getTotal(){
-this.kwota=this.wydatkiService.getWydatki();
- }
+
 
 }

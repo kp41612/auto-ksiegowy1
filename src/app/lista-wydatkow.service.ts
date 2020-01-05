@@ -34,4 +34,22 @@ export class WydatkiService {
     const ind = this.wydatki.findIndex(wydatek => wydatek.id === id);
     this.wydatki.splice(ind, 1);
   }
+  getSuma(): number {
+    var zmienna = 0.00;
+  
+    this.wydatki.forEach(function(x){
+      zmienna = zmienna + x.kwota;
+    });
+    return zmienna;
+
+  }
+  getSuma_k(): number {
+    var zmienna = 0.00;
+    if (Wydatek.kategoria=="Tankowanie")
+    {
+      this.wydatki.forEach(function(x){
+      zmienna = zmienna + x.kwota;});
+    return zmienna;
+    }
+  } 
 }
