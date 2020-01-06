@@ -44,16 +44,49 @@ export class WydatkiService {
     return zmienna;
 
   }
-  getSuma_k(): number {  
-    var zmienna = 0.00;
+  getSuma_tank(): number {  
+    var zmienna_tank = 0.00;
 
     this.wydatki.forEach(function(x){
-      if(Wydatek.kategoria == "Tankowanie"){
-        zmienna = zmienna + x.kwota;
+      if (x.kategoria == "Tankowanie"){
+        zmienna_tank = zmienna_tank + x.kwota;
         }
-      
-      
     });
-    return zmienna;
+    return zmienna_tank;
   } 
+  getSuma_myj(): number {
+    var zmienna_myj = 0.00;
+
+    this.wydatki.forEach(function(x){
+       if (x.kategoria == "Myjnia"){
+        zmienna_myj = zmienna_myj + x.kwota;
+      }
+    });
+    return zmienna_myj;
+  }
+  getSuma_serwis(): number {  
+    var zmienna_serwis = 0.00;
+
+    this.wydatki.forEach(function(x){
+      if (x.kategoria == "Serwis"){
+        zmienna_serwis = zmienna_serwis + x.kwota;
+        }
+    });
+    return zmienna_serwis;
+  } 
+  getSuma_inne():number{
+    var zmienna_inne = 0.00;
+
+    this.wydatki.forEach(function(x){
+       if (x.kategoria == "Inne"){
+        zmienna_inne = zmienna_inne + x.kwota;
+      }
+    });
+    return zmienna_inne;
+  }
+  getTab(){
+  var tab = [];
+  tab = [this.suma_tank,this.suma_myj, this.suma_serwis, this.suma_inne];
+  }
+  
 }

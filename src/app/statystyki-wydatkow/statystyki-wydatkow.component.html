@@ -8,27 +8,37 @@
    
 
 </table>
-<h6>Wydatki Łącznie: <span style="font-weight:normal;">{{suma | number:'1.2-2'}} zł</span></h6>
 
- <div style="width:25%;"><br>
+
+ <!-- <div style="width:25%;"><br>
       <label style="font-weight:bold;">Kategoria:</label><br>
       <select class="form-control" name="kategoria" [(ngModel)]="nowyWydatek.kategoria">       
-        <option *ngFor="let k of kategorie" >{{k}}</option>
+        <option *ngFor="let k of kategorie" >{{k}}</option> -->
          <!-- <span *ngIf='ngModel == "Tankowanie"'>
            <p>adasdas</p>
          </span> -->
-      </select>   
-</div> <br>
+      <!-- </select>   
+</div> <br> -->
+<h6>Wydatki Łącznie: <span style="font-weight:normal;">{{suma | number:'1.2-2'}} zł</span></h6>
+
+  <h6>Wydatki Tankowanie: <span style="font-weight:normal;">{{suma_tank | number:'1.2-2'}} zł</span></h6>
+  <h6>Wydatki Myjnia: <span style="font-weight:normal;">{{suma_myj | number:'1.2-2'}} zł</span></h6>
+  <h6>Wydatki Serwis: <span style="font-weight:normal;">{{suma_serwis | number:'1.2-2'}} zł</span></h6>
+  <h6>Wydatki Inne: <span style="font-weight:normal;">{{suma_inne | number:'1.2-2'}} zł</span></h6>
+
+<table class="table">
+<tr>
+    <th>Kategoria</th>
+    <th>Kwota wydatku</th>
+</tr>  
+
+<tr *ngFor="let k of kategorie">
+  <td>{{k}}</td>
+</tr>
+
+<tr *ngFor="let k of tab" style="">
+   <td >{{k}}</td>
+</tr> 
 
 
-   <span>{{sumak}}</span>
-
-
-  <h6>Wydatki Tankowanie: <span style="font-weight:normal;">{{suma | number:'1.2-2'}} zł</span></h6>
-  <h6>Wydatki Myjnia: <span style="font-weight:normal;">{{suma | number:'1.2-2'}} zł</span></h6>
-  <h6>Wydatki Serwis: <span style="font-weight:normal;">{{suma | number:'1.2-2'}} zł</span></h6>
-  <h6>Wydatki Inne: <span style="font-weight:normal;">{{suma | number:'1.2-2'}} zł</span></h6>
-
-
-
-
+</table>
