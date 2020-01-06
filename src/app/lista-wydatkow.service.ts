@@ -44,11 +44,16 @@ export class WydatkiService {
     return zmienna;
 
   }
-  getSuma_k(): number {
-    
-   
-    
-    
+  getSuma_k(): number {  
+    var zmienna = 0.00;
 
+    this.wydatki.forEach(function(x){
+      if(Wydatek.kategoria == "Tankowanie"){
+        zmienna = zmienna + x.kwota;
+        }
+      
+      
+    });
+    return zmienna;
   } 
 }
