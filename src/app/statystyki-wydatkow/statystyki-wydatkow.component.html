@@ -20,9 +20,9 @@
       </select>   
 </div> <br>
 
-<tr *ngFor="let wydatek of wydatki">
-   <span *ngIf='wydatek.kategoria == "Tankowanie"'>{{suma}}</span>
-</tr>
+
+   <span>{{sumak}}</span>
+
 
   <h6>Wydatki Tankowanie: <span style="font-weight:normal;">{{suma | number:'1.2-2'}} zł</span></h6>
   <h6>Wydatki Myjnia: <span style="font-weight:normal;">{{suma | number:'1.2-2'}} zł</span></h6>

@@ -6,6 +6,7 @@ export class WydatkiService {
 
   private wydatki: Wydatek[];
   private nextId: number;
+  
 
   constructor() {
       this.wydatki = [
@@ -44,12 +45,10 @@ export class WydatkiService {
 
   }
   getSuma_k(): number {
-    var zmienna = 0.00;
-    if (Wydatek.kategoria=="Tankowanie")
-    {
-      this.wydatki.forEach(function(x){
-      zmienna = zmienna + x.kwota;});
-    return zmienna;
-    }
+    
+   
+    
+    
+
   } 
 }

@@ -14,6 +14,7 @@ kategorie: string[];
 nowyWydatek: Wydatek;
 wydatki: any;
 suma: number;
+sumak: number;
  constructor(private wydatkiService: WydatkiService, private router: Router) { }
 
   ngOnInit() {
@@ -22,6 +23,7 @@ suma: number;
   this.kategorie = this.wydatkiService.getKategorie();
   this.wydatki = this.wydatkiService.getWydatki();
   this.suma = this.wydatkiService.getSuma();
+  this.sumak = this.wydatkiService.getSuma_k();
   }
  
 
