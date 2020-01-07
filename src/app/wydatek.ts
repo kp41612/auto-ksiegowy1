@@ -10,4 +10,10 @@ export class Wydatek {
         public ileKm?: number,) {
     }
 }
+export class Statystyka {
+  constructor (
+    public kategoria: string,
+    public kwota: number,
+  ){}
+}
 export const KATEGORIE = [ 'Tankowanie', 'Myjnia', 'Serwis', 'Inne' ];

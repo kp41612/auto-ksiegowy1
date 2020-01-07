@@ -15,9 +15,10 @@ export class WydatkiService {
       new Wydatek(3, 'Serwis', 1250, 'Klocki, rozrząd i parę drobiazgów', new Date(2018, 3, 16)),
       new Wydatek(4, 'Inne', 315.50, 'Różowe futerko na kierownicę', new Date(2018, 3, 16),null,25),
       new Wydatek(5, 'Tankowanie', 325.20, 'Do pełna po urlopie', new Date(2017, 7, 12), 527),
-      new Wydatek(6, 'Tankowanie', 257.30, '', new Date(2017, 7, 13), null, 35)
+      new Wydatek(6, 'Tankowanie', 257.30, '', new Date(2017, 7, 13), null, 35),
+      new Wydatek(7, 'Tankowanie', 257.30, '', new Date(2020, 0, 13), null, 35)
     ]; 
-    this.nextId = 7;
+    this.nextId = 8;
   }
     getWydatki() {
     return this.wydatki;
@@ -88,5 +89,6 @@ export class WydatkiService {
   var tab = [];
   tab = [this.suma_tank,this.suma_myj, this.suma_serwis, this.suma_inne];
   }
+
   
 }
