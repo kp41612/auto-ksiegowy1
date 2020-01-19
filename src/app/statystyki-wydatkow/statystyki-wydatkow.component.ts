@@ -31,19 +31,21 @@ oblicz_kwote(kategoria: String): number{
 
   var suma = 0;
   var datawydatku;
-  const format = 'yyyy/MM/dd';
-  const locale = 'en-US';
+
+    const format = 'yyyy/MM/dd';
+    const locale = 'en-US';
   
   this.wydatki.forEach(function(x){
     
-  datawydatku = x.data;
-  const formattedDate = formatDate(datawydatku, format, locale);
-  datawydatku = new Date(formattedDate);
-  datawydatku = datawydatku.getMonth();
+    datawydatku = x.data;
+    const formattedDate = formatDate(datawydatku, format, locale);
+    
+    datawydatku = new Date(formattedDate);
+    datawydatku = datawydatku.getMonth();
  
   if( n == datawydatku ){
     if(x.kategoria==kategoria){
-    suma = suma + x.kwota;
+       suma = suma + x.kwota;
     }
   }
   });
